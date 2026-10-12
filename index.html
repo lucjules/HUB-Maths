@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mathématiques · Révisions</title>
+<style>
+  :root{
+    color-scheme: light dark;
+    --bg:#f6f7f9; --surface:#fff; --border:#e4e7ec;
+    --text:#14171c; --muted:#667085; --accent:#8b5cf6;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(16,24,40,.06), 0 6px 20px rgba(16,24,40,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0e1014; --surface:#171a20; --border:#262b34;
+      --text:#e7e9ee; --muted:#98a2b3; --accent:#a78bfa;
+      --shadow:0 1px 2px rgba(0,0,0,.5), 0 6px 24px rgba(0,0,0,.35);
+    }
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--text);
+       font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;}
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .container{max-width:900px; margin:0 auto; padding:32px 20px 80px}
+
+  .crumbs{font-size:.86rem; color:var(--muted); margin-bottom:24px}
+  .crumbs a{color:var(--muted)}
+  .crumbs span{color:var(--text)}
+
+  .head{margin-bottom:32px; padding-bottom:24px; border-bottom:1px solid var(--border)}
+  .head .tag{
+    display:inline-block; font-size:.78rem; font-weight:700; color:var(--accent);
+    background:color-mix(in srgb, var(--accent) 14%, transparent);
+    padding:4px 11px; border-radius:999px; margin-bottom:12px;
+  }
+  .head h1{font-size:clamp(1.6rem,3.5vw,2.2rem); margin:0 0 8px; letter-spacing:-.02em}
+  .head p{color:var(--muted); margin:0}
+
+  .list{display:grid; gap:14px}
+  .chapter{
+    display:flex; align-items:center; gap:18px;
+    padding:20px 22px; background:var(--surface);
+    border:1px solid var(--border); border-radius:var(--radius);
+    color:var(--text); text-decoration:none; box-shadow:var(--shadow);
+    transition:border-color .18s, transform .18s;
+  }
+  .chapter:hover{border-color:var(--accent); transform:translateX(4px); text-decoration:none}
+  .num{
+    flex:none; width:44px; height:44px; border-radius:12px;
+    display:grid; place-items:center; font-weight:800; font-size:1.1rem;
+    background:color-mix(in srgb, var(--accent) 14%, transparent);
+    color:var(--accent);
+  }
+  .body{flex:1; min-width:0}
+  .body strong{display:block; font-size:1.05rem; margin-bottom:2px}
+  .body small{color:var(--muted); font-size:.88rem}
+  .arrow{flex:none; color:var(--muted); font-size:1.3rem; transition:transform .18s}
+  .chapter:hover .arrow{transform:translateX(3px); color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <nav class="crumbs">
+    <a href="../">Accueil</a> / <span>Mathématiques</span>
+  </nav>
+
+  <header class="head">
+    <span class="tag">📐 Mathématiques</span>
+    <h1>Mathématiques</h1>
+    <p>Choisis un chapitre pour réviser le cours, les QCM et les cartes mémoire.</p>
+  </header>
+
+  <div class="list">
+    <a class="chapter" href="chapitre-1.html">
+      <span class="num">1</span>
+      <span class="body">
+        <strong>Chapitre 1</strong>
+        <small>Cours · QCM · Cartes mémoire</small>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+</div>
+</body>
+</html>
